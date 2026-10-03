@@ -20,7 +20,7 @@ def load_config():
 
 def run(text):
     cfg = load_config()
-    payload = {"model": cfg.get("OPENAI_MODEL", 'chat-default'),
+    payload = {"model": cfg.get("OPENAI_MODEL", 'claude-sonnet-5-5'),
                "messages": [{"role": "system", "content": "Perform API contract review. Return concise JSON for human review."},
                             {"role": "user", "content": text}],
                "max_tokens": 256, "temperature": 0}
